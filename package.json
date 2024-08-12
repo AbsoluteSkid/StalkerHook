@@ -1,0 +1,19 @@
+{
+  "name": "stalkerhook",
+  "productName": "StalkerHook",
+  "version": "1.0.0",
+  "description": "A real-time application that alerts when a specific Roblox player comes online",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . "
+  },
+  "author": "Dark",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^31.2.0",
+    "electron-packager": "^17.1.2",
+    "electron-store": "^10.0.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {}
+}
