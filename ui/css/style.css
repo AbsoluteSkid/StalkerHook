@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300');
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+   }
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #1f1f1f;
+    position: relative;
+}
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+    background: transparent;
+}
+.login-container {
+    padding: 40px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fafafa;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fafafa;
+    background-color: transparent;
+    outline-color: #ccc;
+    overflow: hidden;
+}
+.enter-btn {
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    color: white;
+    outline-offset: 0px;
+    cursor: pointer;
+    text-shadow: none;
+    height: 30px;
+    width: 100%;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translate3d(0,0,0);
+    overflow: hidden;
+}
+.enter-btn:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+}
+.ripple {
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: scale(0);
+    background: #fff;
+    opacity: 1;
+}
+.ripple-animate {
+    animation: ripple;
+}
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(1.78);
+    }
+}
+.hidden {
+    display: none;
+}
+p.error {
+    color: #ff1e1e;
+    margin: 0;
+    margin-top: 18px;
+    padding: 0;
+}
+.account {
+    padding: 10px;
+    height: 60px;
+    width: 250px;
+    background-color: #121212;
+    color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    overflow: hidden;
+}
+.profile {
+    border-radius: 100%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0);
+    height: 55px;
+    width: 55px;
+}
+.profile:hover {
+    box-shadow: inset 0 0 13px rgba(255, 255, 255, .5), 0 0 13px rgba(255, 255, 255, 0.5);
+}
+.webhook {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-left: 15px;
+}
+.logout-btn {
+    border: 0 solid;
+    border-radius: 30%;
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .4);
+    background-color: transparent;
+    color: white;
+    outline-offset: 0px;
+    cursor: pointer;
+    text-shadow: none;
+    margin: 0;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+    transition: all 855ms cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translate3d(0,0,0);
+    padding: 0;
+    padding-left: 3px;
+    padding-top: 2px;
+}
+.logout-btn:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, 0.5);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+}
+.users {
+    display: table-column;
+    align-items: center;
+    position: relative;
+}
+.user {
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    position: inherit;
+    margin-bottom: 21px;
+}
+.user-content {
+    display: flex;
+    flex-direction: column;
+}
+.avatar {
+    border-radius: 100%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.01);
+    height: 100px;
+    width: 100px;
+}
+.avatar:hover {
+    box-shadow: inset 0 0 13px rgba(255, 255, 255, .5), 0 0 13px rgba(255, 255, 255, 0.5);
+}
+.userinfo {
+    display: block;
+    justify-content: center;
+}
+.status {
+    width: 12px;
+    margin-right: 4px;
+}
+text {
+    margin-left: 1px;
+}
+.add-users {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#add-user {
+    width: 140px;  
+}
+.add-user-btn {
+    border: 1px;
+    border-radius: 30%;
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .4);
+    background-color: transparent;
+    color: white;
+    outline-offset: 0px;
+    cursor: pointer;
+    text-shadow: none;
+    margin: 0;
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    transition: all 880ms cubic-bezier(0.19, 1, 0.22, 1);
+    transform: translate3d(0,0,0);
+    padding: 0;
+    padding-top: 2px;
+    overflow: hidden;
+}
+.add-user-btn:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 14px rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 2px #427388;
+}
+div.error {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.delete-btn {
+    border: 1px;
+    border-radius: 30%;
+    cursor: pointer;
+    margin: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transform: translate3d(0,0,0);
+    padding-top: 2px;
+    overflow: hidden;
+    color: #3f3f3f;
+    position: absolute;
+    transition: all 250ms;
+    top: 3.5vh;
+    right: 0;
+}
+
+.delete-btn:hover {
+    color: #999999;
+}
